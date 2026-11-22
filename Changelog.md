@@ -1,3 +1,14 @@
+# Unreleased
+
+**Dependency updates**
+
+* Updated `simplematrixbotlib` to 2.13.1, `matrix-nio` to 0.26.0, `PyYAML` to 6.0.4,
+  `aiohttp` to 3.14.5 and `pytest` to 9.2.0.
+* Raised the minimum Python version to 3.10, which is required by `matrix-nio` 0.26.
+* Updated the container image build to Python 3.13 on Debian 13 (trixie). `libolm` is
+  no longer required because `matrix-nio` now uses `vodozemac` for end-to-end encryption.
+* Updated the Forgejo CI actions and the Ansible role dependencies.
+
 # 1.2.2
 
 Updating dependencies

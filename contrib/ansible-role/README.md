@@ -1,9 +1,7 @@
 # matrix-registration-bot Ansible role
 
-Written for Debian 11
-(does not work on Debian 10 with Python 3.7,
-because the [simplematrixbotlib](https://pypi.org/project/simplematrixbotlib/)
-dependency is only available for newer Python versions).
+Written for Debian 12 or newer, which provides Python 3.11 or newer.
+The bot requires Python 3.10 or newer.
 
 Installs the virtual environment in `/opt/venvs/matrix-registration-bot`
 next to the virtual environment created by the official Matrix Synapse Debian package.
