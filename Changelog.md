@@ -8,6 +8,10 @@
 * Updated the container image build to Python 3.13 on Debian 13 (trixie). `libolm` is
   no longer required because `matrix-nio` now uses `vodozemac` for end-to-end encryption.
 * Updated the Forgejo CI actions and the Ansible role dependencies.
+* Updated the documentation to use the maintained container image on
+  `git.justprojects.de` instead of the outdated Docker Hub image.
+* Consolidated the README into a single Markdown file used by both the repository
+  and PyPI.
 
 # 1.2.2
 

@@ -37,4 +37,4 @@ find = {}
 
 [tool.setuptools.dynamic]
 version = {attr = "matrix_registration_bot.__version__"}
-readme = {file = "README.rst"}
+readme = {file = "README.md", content-type = "text/markdown"}

@@ -1,8 +1,8 @@
 # Matrix Registration Bot
 
+[![CI](https://git.justprojects.de/subDesTagesMitExtraKaese/matrix-registration-bot/actions/workflows/ci.yml/badge.svg?branch=main)](https://git.justprojects.de/subDesTagesMitExtraKaese/matrix-registration-bot/actions/workflows/ci.yml)
 ![Pypi badge](https://img.shields.io/pypi/v/matrix-registration-bot.svg)
 ![License](https://img.shields.io/pypi/l/matrix-registration-bot?color=%23008000)
-![Docker pulls](https://img.shields.io/docker/pulls/moanos/matrix-registration-bot)
 
 This bot aims to create and manage registration tokens for a matrix server. It wants to help invitation based servers to
 maintain usability. It does not create a user itself, but allows registration only with a valid token as defined by
@@ -18,7 +18,7 @@ The feature was added in Matrix v1.2. More information can be found in the
 [Synapse Documentation](https://matrix-org.github.io/synapse/latest/usage/administration/admin_api/registration_tokens.html)
 .
 
-If you have any questions, or if you need help setting it up, read the [troublshooting guide](./docs/troubleshooting.md)
+If you have any questions, or if you need help setting it up, read the [troublshooting guide](https://git.justprojects.de/subDesTagesMitExtraKaese/matrix-registration-bot/src/branch/main/docs/troubleshooting.md)
 or join [#matrix-registration-bot:hyteck.de](https://matrix.to/#/#matrix-registration-bot:hyteck.de).
 
 # Supported commands
@@ -166,7 +166,7 @@ version: "3.7"
 
 services:
   matrix-registration-bot:
-    image: moanos/matrix-registration-bot:latest
+    image: git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:latest
     environment:
       LOGGING_LEVEL: DEBUG
       BOT_SERVER: "https://synapse.example.com"

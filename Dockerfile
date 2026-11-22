@@ -1,5 +1,5 @@
 FROM python:3.13-slim AS compile-image
-MAINTAINER Julian-Samuel Gebühr
+LABEL org.opencontainers.image.authors="subDesTagesMitExtraKaese"
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential gcc

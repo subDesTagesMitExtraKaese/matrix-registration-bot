@@ -8,8 +8,7 @@ be addressed.
 The version number should follow best practices of [semantic versioning](https://semver.org/).
 
 When it is decided to release and the `develop` branch should include all commits and merge requests that should be
-released. Create the `README.rst` (for PyPi) with `pandoc --from=markdown --to=rst --output=README.rst README.md `. 
-Commit and then merge into the main branch. On the main branch there are only two changes to make: Bump the
+released. Commit and then merge into the main branch. On the main branch there are only two changes to make: Bump the
 version in `matrix_registration_bot/__init__.py` and commit this with `Bump version to v1.0.0`
 
 ## Test a release
@@ -50,8 +49,8 @@ $ twine upload dist/*
 
 First build the latest docker version and test it.
 ```bash
-docker build . --tag moanos/matrix-registration-bot:latest
-docker run -e "CONFIG_PATH=/config/config.yml" --mount type=bind,src=./config.yml,dst=/config/config.yml,ro moanos/matrix-registration-bot:latest
+docker build . --tag git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:latest
+docker run -e "CONFIG_PATH=/config/config.yml" --mount type=bind,src=./config.yml,dst=/config/config.yml,ro git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:latest
 ```
 
 If that looks good you can tag it with the appropriate docker version. Docker versions should follow the versioning
@@ -61,6 +60,6 @@ package version. This helps if the package is okay but the docker build has an e
 Publish the image with
 ```bash
 docker login
-docker push moanos/matrix-registration-bot:1.2.2-0
+docker push git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:1.3.0
 ```
 and don't forget to update [spantaleev/matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/ddbbd42718b15172cdf409f2c1050362d42c3151/roles/custom/matrix-bot-matrix-registration-bot/defaults/main.yml#L11).
