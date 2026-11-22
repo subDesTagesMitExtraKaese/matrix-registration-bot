@@ -12,6 +12,9 @@ RUN /opt/venv/bin/pip install -r requirements.txt
 COPY . .
 RUN /opt/venv/bin/pip install .
 
+FROM compile-image AS test
+RUN /opt/venv/bin/python -m pytest -q
+
 FROM python:3.13-slim
 
 COPY --from=compile-image /opt/venv /opt/venv
