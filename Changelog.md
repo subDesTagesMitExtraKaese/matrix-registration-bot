@@ -1,4 +1,4 @@
-# Unreleased
+# 1.3.1
 
 **Dependency updates**
 
@@ -12,6 +12,7 @@
   `git.justprojects.de` instead of the outdated Docker Hub image.
 * Consolidated the README into a single Markdown file used by both the repository
   and PyPI.
+* Updated package metadata to use an SPDX license expression.
 
 # 1.2.2
 

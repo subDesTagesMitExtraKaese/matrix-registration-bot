@@ -53,13 +53,13 @@ docker build . --tag git.justprojects.de/subdestagesmitextrakaese/matrix-registr
 docker run -e "CONFIG_PATH=/config/config.yml" --mount type=bind,src=./config.yml,dst=/config/config.yml,ro git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:latest
 ```
 
-If that looks good you can tag it with the appropriate docker version. Docker versions should follow the versioning
-of `<package-version>-0` where 0 ist the docker iteration and is increased by one for each docker build of the same
-package version. This helps if the package is okay but the docker build has an error.
+If that looks good you can tag it with the appropriate docker version. Images use the package version
+(for example `1.3.1`). If you need to rebuild the same package version, append `-<iteration>`
+(for example `1.3.1-1`).
 
 Publish the image with
 ```bash
-docker login
-docker push git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:1.3.0
+docker login git.justprojects.de
+docker push git.justprojects.de/subdestagesmitextrakaese/matrix-registration-bot:1.3.1
 ```
 and don't forget to update [spantaleev/matrix-docker-ansible-deploy](https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/ddbbd42718b15172cdf409f2c1050362d42c3151/roles/custom/matrix-bot-matrix-registration-bot/defaults/main.yml#L11).
