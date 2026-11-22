@@ -13,6 +13,8 @@
 * Consolidated the README into a single Markdown file used by both the repository
   and PyPI.
 * Updated package metadata to use an SPDX license expression.
+* Fixed the Forgejo Actions workflow to use the available `docker` runner and
+  removed the unsupported `permissions` block.
 
 # 1.2.2
 
